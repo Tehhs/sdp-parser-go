@@ -1,6 +1,7 @@
 package parser
 
 import ( 
+	"fmt"
 )
 
 
@@ -24,10 +25,27 @@ type Parser struct {
 	stacks []ParsingStack 
 }
 
-func (self *Parser) Parse(input string) {
+func (parser *Parser) Using(stacks []ParsingStack) { 
+	parser.stacks = stacks; 
+}
+
+func (parser *Parser) Parse(input string) {
+
+
+	var startIndex int = 0
+	var endIndex int = 0
+	for { 
+
+		var sight string = input[startIndex:endIndex]
+
+		fmt.Println(">", sight)
+
+		endIndex++;
+
+		if endIndex >= len(input) {
+			break;
+		}
+	}
 
 }
 
-func (self *Parser) Using(stacks []ParsingStack) { 
-
-}

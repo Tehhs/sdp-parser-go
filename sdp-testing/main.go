@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	parser "sdp/parser"
 )
 
 func main() { 
@@ -15,5 +16,12 @@ func main() {
 	// 	},
 	// })
 	
-	
+	p := parser.Parser{}
+	p.Using([]parser.ParsingStack{
+		parser.ParsingStack{
+			// []parser.ParsingFunction{
+			// 	parser.StringMatch(),
+			// },
+		},
+	})
 } 	
