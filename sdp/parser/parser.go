@@ -1,5 +1,13 @@
 package parser
 
+import ( 
+)
+
+
+type ParsingStack struct { 
+	functions []ParsingFunction
+}
+
 
 type ParsingFunctionInput string 
 type Signal string 
@@ -11,6 +19,15 @@ func StringMatch() func(ParsingFunctionInput) Signal {
 	}
 }
 
-func Parse([]ParsingFunction) {
+
+type Parser struct { 
+	stacks []ParsingStack 
+}
+
+func (self *Parser) Parse(input string) {
+
+}
+
+func (self *Parser) Using(stacks []ParsingStack) { 
 
 }
