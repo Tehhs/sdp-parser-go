@@ -18,10 +18,12 @@ func main() {
 	
 	p := parser.Parser{}
 	p.Using([]parser.ParsingStack{
-		parser.ParsingStack{
-			// []parser.ParsingFunction{
-			// 	parser.StringMatch(),
-			// },
-		},
+		// parser.ParsingStackUtil.New(
+		// 	// func(text parser.ParsingFunctionInput) parser.Signal {
+		// 	// 	return "YES"
+		// 	// },
+		// ),
 	})
+		
+	
 } 	

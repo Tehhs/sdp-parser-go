@@ -9,6 +9,14 @@ type ParsingStack struct {
 	functions []ParsingFunction
 }
 
+var ParsingStackUtil = ParsingStack{}
+
+func (ParsingStack) New(parsingFunctions []ParsingFunction) ParsingStack { 
+	return ParsingStack{
+		parsingFunctions,
+	}
+}
+
 
 type ParsingFunctionInput string 
 type Signal string 
